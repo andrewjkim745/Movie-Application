@@ -9,4 +9,11 @@ export const getAllMovies = async () => {
     }
 }
 
-export const getSingleFood = async ()
+export const getSingleMovie = async (movie_id) => {
+    try {
+        const resp = await api.get(`/allMovies/${movie_id}`)
+        return resp.data
+    } catch (error) {
+        throw error
+    }
+}

@@ -1,0 +1,17 @@
+.MovieCard {
+    display: flex;
+    flex-direction: column;
+}
+.movieImage {
+    width: 50%;
+}
+
+
+.widget-container {
+    display: flex;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: black;
+}
+
+
