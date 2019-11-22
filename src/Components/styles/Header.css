@@ -5,9 +5,16 @@
     justify-content: space-between;
 }
 
+h1 {
+    align-self: center;
+}
+
 .title {
     display: flex;
     margin-left: 30px;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 12px;
+    align-self: center;
 
 
 }
@@ -17,7 +24,11 @@
 }
 
 .popcorn:hover {
-    animation: rotating 2s linear infinite;
+    /* animation: rotating 2s linear infinite; */
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
 }
 
 a {
@@ -26,6 +37,7 @@ a {
     text-decoration: none;
     color: grey;
     font-size: 30px;
+    font-family: 'Rubik Mono One', sans-serif;
 
 }
 
@@ -45,5 +57,34 @@ a:hover {
     }
     to {
       transform: rotate(360deg);
+    }
+  }
+
+  @keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+
+
+  @media only screen and (max-width: 500px) {
+    .popcorn {
+        width: 30%;
+    }
+
+    a {
+        font-size: 10px;
     }
   }

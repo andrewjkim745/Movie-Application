@@ -45,13 +45,6 @@ const MovieForm = (props) => {
                placeholder='Movie Overiew: '
                onChange={(e) => onChange(e)}
             />
-            {/* <Input
-               name='production-companies'
-               value={production_companies}
-               required={true}
-               placeholder='Movie Production Companies: '
-               onChange={(e) => onChange(e)}
-            /> */}
             <Input
                name='image_url'
                value={image_url}
@@ -76,7 +69,7 @@ const MovieForm = (props) => {
                onChange={(e) => onChange(e)}
             />
             <button className="submit" title='Submit Info' onClick={handle}>Submit</button>
-         </div>>
+         </div>
       </form>
 
    )

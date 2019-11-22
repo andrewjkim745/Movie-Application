@@ -3,7 +3,7 @@
     width: 90%;
     border-style: solid;
     border-color: #707070;
-    box-shadow: 7px 7px lightgray;
+    box-shadow: 5px 7px lightgray;
 }
 
 .MovieCard:hover {
@@ -15,17 +15,39 @@
     
 }
 
+.Title {
+    margin-left: 30px;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-family: 'Fredericka the Great', cursive;
+}
+
+.widget-title {
+    align-self: center;
+}
+
+.widget-movie-title {
+    align-self: center;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-family: 'Fredericka the Great', cursive;
+}
+
+
+
+
 p {
-    font-family: Source Sans Pro;
+    font-family: sans-serif;
     font-weight: lighter;
 }
 
 
 button {
     align-self: center;
-    width: 40%;
-    border: 1px solid red;
-    border-radius: 8px;
+    width: 20%;
+    border: 2px solid red;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-bottom: 20px;
  
 }
 
@@ -41,11 +63,14 @@ button:hover {
     display: flex; 
     flex-wrap: wrap;
     font-size: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .runtime {
     display: flex;
     margin-left: 30px;
+    font-family: 'Rubik Mono One', sans-serif;
 }
 
 .runtime:hover {
@@ -56,6 +81,7 @@ button:hover {
 }
 
 .genre {
+    font-family: 'Rubik Mono One', sans-serif;
     display: flex;
     margin-left: 30px;
 }
@@ -67,6 +93,7 @@ button:hover {
 }
 
 .budget {
+    font-family: 'Rubik Mono One', sans-serif;
     display: flex;
     margin-left: 30px;
 }
@@ -79,6 +106,7 @@ button:hover {
 }
 
 .revenue {
+    font-family: 'Rubik Mono One', sans-serif;
     display: flex;
     margin-left: 30px;
 }
@@ -95,6 +123,22 @@ flex-direction: column;
 justify-content: flex-start;
 }
 
+
+.views {
+    align-self: center;
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+.votes {
+    align-self: center;
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+.widget-overview {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
 .views:hover {
     transition: 1s;
     transform: scale(1.1);
@@ -105,7 +149,7 @@ justify-content: flex-start;
 
 .votes:hover {
     transition: 1s;
-    transform: scale(1.2);
+    transform: scale(1.1);
     color: green;
 }
 
@@ -140,6 +184,7 @@ justify-content: flex-start;
 .green {
     display: flex;
     margin-left: 30px;
+    font-family: 'Rubik Mono One', sans-serif;
 }
 
 .green:hover {
@@ -151,6 +196,7 @@ justify-content: flex-start;
 .red {
     display: flex;
     margin-left: 30px;
+    font-family: 'Rubik Mono One', sans-serif;
 }
 
 .red:hover {
@@ -167,9 +213,10 @@ justify-content: flex-start;
     width: 100%;
 }
 .input {
-    position: relative;
-    width: 50%;
-    height: 50px;
+    display: flex;
+    align-self: center;
+    width: 60%;
+    padding: 20px;
 }
 
 .middle-container {
@@ -190,13 +237,13 @@ justify-content: flex-start;
     justify-content: center;
     align-self: center;
     border: 3px solid black;
-    width: 50%;
+    width: 60%;
     position: relative;
     margin: 0 auto;
 }
 
 input {
-    width:40%; 
+    width: 60%;
     border-radius: 20px;
 }
 
@@ -209,13 +256,39 @@ input {
     transition: .5s
 }
 
+span {
+    padding: 10px;
+}
+
 
 
 
 @keyframes run {
     0% { left: 0}
     25%{ left: 20%}
-    75%{ right: 20%}
+    75%{ right: 40%}
     100% {left: 0}
 }
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
 
+
+@media only screen and (max-width: 500px) {
+
+
+}
