@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { mockApi } from './Services/mockApi'
-import { MovieCard } from './Shared/MovieCard.js'
-import { Button } from './Shared/Button.js'
+import { MovieCard } from './shared/MovieCard.js'
+// import { Button } from './Shared/Button.js'
 
 export default class Movies extends Component {
     constructor(props) {
@@ -27,12 +27,17 @@ export default class Movies extends Component {
         }
     }
 
-    handleDeleteMovies = () => {
-        mockApi.delete(`./allMovies${this.state.movieToDelete.id}`).then(() => {
+    handleDeleteMovies = async (id) => {
+        console.log(id)
+        await mockApi.delete(`./allMovies/${id}`).then(() => {
             const allMovies = this.state.movies
             allMovies.splice(this.state.movieToDelete.index, 1);
             this.setState({movies: allMovies})
-        }).then(()=> this.handleCloseMovie())
+            
+        })
+        .then(()=>{
+            this.fetchMovies()
+        })
         .catch((err) => console.error(err))
     }
     
@@ -45,12 +50,11 @@ export default class Movies extends Component {
         return (
             this.state.movies.map(movie => {
                 return (
-                    <MovieCard key={movie.id} movie={movie}>
-                    <Button className="delete" onClick= {this.handleDeleteMovies}/>
-                
-                    
-                    
+                    <div className='container'>
+                    <MovieCard key={movie.id} movie={movie} deleteFn={this.handleDeleteMovies}>
+                        
                     </MovieCard>
+                    </div>
                     
                     
                     
