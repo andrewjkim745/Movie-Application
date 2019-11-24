@@ -47,7 +47,9 @@ export default class CreateMovie extends Component {
         const { Title, Overview, image_url, Genre, revenue, budget, release_Date, production_companies, runtime } = this.props
         return (
             <div className="movie-forms">
-                <h3>Add Movie Info!</h3>
+                <div className='title-div'>
+                <h3 className="addMovie">Add Movie Info!</h3>
+                </div>
                 <MovieForm
                     formData={{ Title, Overview, image_url, Genre, revenue, budget, release_Date, production_companies, runtime}}
                     onChange={this.handleChange}

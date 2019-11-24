@@ -4,6 +4,7 @@ import Header from './Components/Header'
 import Movies from './Components/Movies'
 import Widget from './Components/Widget'
 import Footer from './Components/Footer'
+import Middle from './Components/PopularMovies'
 // import MovieForm from './Components/MovieForm'
 // import MovieCard from './Components/Shared/MovieCard'
 // import DetailedMovie from './Components/screens/DetailedMovie'
@@ -17,6 +18,7 @@ function App() {
       <div>
       <Header/>
       <Widget/>
+      <Middle/>
       </div>
       <main>
         <Routes/>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { widgetApi } from './Services/widgetApi'
-import { WidgetCard } from './Shared/WidgetCard.js'
+import { WidgetCard } from './shared/WidgetCard.js'
 import Axios from 'axios'
 
 export default class Widget extends Component {

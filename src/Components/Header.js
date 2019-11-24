@@ -13,10 +13,8 @@ const Header = () => {
     return (
         <div className="header-container">
             <div className="title">
-                <h1>Movie App!</h1>
-            </div>
-            <div className="search">
-                <input type="text" placeholder="Search..." />
+                <h1>Movie Info App!</h1>
+                <img className='popcorn' src='https://cdn4.iconfinder.com/data/icons/planner-color/64/popcorn-movie-time-512.png'/>
             </div>
             <div className='nav'>
                 <NavLink exact to='/addMovie' activeClassName='active'>
