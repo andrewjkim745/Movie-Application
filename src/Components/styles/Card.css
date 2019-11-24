@@ -15,6 +15,12 @@
     
 }
 
+.movie-forms {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .Title {
     margin-left: 30px;
     font-family: 'Rubik Mono One', sans-serif;
@@ -31,8 +37,14 @@
     font-family: 'Fredericka the Great', cursive;
 }
 
-
-
+.addMovie {
+   font-family: 'Rubik Mono One', sans-serif;
+   font-family: 'Fredericka the Great', cursive;
+}
+.title-div {
+    display: flex;
+    justify-content: center;
+}
 
 p {
     font-family: sans-serif;
@@ -249,6 +261,7 @@ input {
 
 .submit {
     border-color: green;
+    
 
 }
 .submit:hover {
